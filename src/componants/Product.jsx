@@ -7,7 +7,16 @@ import { FaHeart} from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-const Product = ({imgsrce,imgalte,text,texttwo,twotext,badgetxt}) => {
+import { useDispatch } from 'react-redux';
+import { addCart } from '../redux/slices/cartslice';
+
+
+const Product = ({item,imgsrce,imgalte,text,texttwo,twotext,badgetxt}) =>{
+  const dispatch = useDispatch();
+  const handleAddtoCart = ()=>{
+    dispatch(addCart({...item,qtn:1}));    
+  
+  }
   return (
     <>
     {/* {all.map(item=> */}
@@ -27,10 +36,17 @@ const Product = ({imgsrce,imgalte,text,texttwo,twotext,badgetxt}) => {
       <Text tag={'p'} text={'Compare'} className='font-light hover:font-bold text-[15px]' /> 
       <IoIosGitCompare className='mt-[6px] text-[15px]' /> 
       </Flex>
-      <Flex className={'align-middle  justify-end gap-x-5'} >
-      <Text tag={'h5'} text={'Add to Cart'} className='font-light hover:font-bold text-[15px]' />
+<div onClick={handleAddtoCart} className="cursor-pointer">
+
+<Flex  className={'align-middle  justify-end gap-x-5'} >
+      <Text
+       
+      tag={'h5'} 
+      text={'Add to Cart'}
+      className='font-light  hover:font-bold text-[15px]' />
       <FaShoppingCart className='mt-[6px] text-[15px]' />  
       </Flex>
+</div>
           </div>
      </div>
     

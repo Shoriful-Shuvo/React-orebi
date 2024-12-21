@@ -5,6 +5,7 @@ import Bars from '../assets/icons/Bars'
 import Text from './Text'
 import { FaSearch,FaUserAlt,FaCaretDown } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom'
 
 
 const Category = () => {
@@ -17,7 +18,7 @@ const Category = () => {
                 <div className="w-[15%] pl-[10px] pt-[15px]">
                     <Flex className={`items-center`} >
                     <Bars/> 
-                    <Text tag={'h3'}  Text={"Shop by Category"} className={'text-[14px] font-[DM]  pl-[15px]'}/>
+                    <Text tag={'h3'}  text={"Shop by Category"} className={'text-[14px] font-[DM]  pl-[15px]'}/>
                     </Flex>
                 </div>
                 <div className="w-[60%] relative ">
@@ -28,7 +29,11 @@ const Category = () => {
                 <Flex className='items-center relative'>
                 <FaUserAlt className='absolute  top-[18px]  left-[150px] text-[14px] ' />
                 <FaCaretDown className='absolute  top-[18px]  left-[165px]' />
-                <IoCartSharp  className='absolute  top-[16px]  left-[200px] text-[18px] ' />
+               <Link to={"/cart"} >
+               <IoCartSharp  className='absolute  top-[16px]  left-[200px] text-[18px] ' />
+               
+               </Link>
+
                 </Flex>
                 
                 </div>

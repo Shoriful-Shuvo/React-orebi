@@ -43,7 +43,7 @@ return (
 
 <Slider {...settings}>
 {all.map(item=>
-<Product imgsrce={item.category.image} text={item.title} badgetxt={item.id+"%"} texttwo={"$"+item.price} twotext={item.category.name}/>
+<Product item={item} imgsrce={item.category.image} text={item.title} badgetxt={item.id+"%"} texttwo={"$"+item.price} twotext={item.category.name}/>
 
 
 )}

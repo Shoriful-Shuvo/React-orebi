@@ -39,7 +39,9 @@ all()
 
 <Slider {...settings}>
 {all.map(item=>
-<Product imgsrce={item.image_url} text={item.name} texttwo={"$"+item.price} badgetxt={item.id+"%"} twotext={item.region}/>
+<Product
+item={item}
+imgsrce={item.image_url} text={item.name} texttwo={"$"+item.price} badgetxt={item.id+"%"} twotext={item.region}/>
 )}
 </Slider>
 

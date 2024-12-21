@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Images = ({imgsrc, imgalt,className}) => {
+const Images = ({imgsrc,fallbackSrc, imgalt,className}) => {
   return (
-    <img src={imgsrc} alt={imgalt} className={`${className}`} />
+    <img src={imgsrc} alt={imgalt}
+    onError={(e) => {
+      e.target.src = fallbackSrc;
+    }}
+    className={`${className}`} />
   )
 }
 

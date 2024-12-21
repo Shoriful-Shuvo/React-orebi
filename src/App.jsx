@@ -14,6 +14,7 @@ import Error from './componants/Error';
 import About from './componants/pages/About';
 import Contacts from './componants/pages/Contacts';
 import Journal from './componants/pages/Journal';
+import Cart from './componants/Cart';
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,6 +26,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
       <Route path="/journal" element={<Journal/>}/>
+      <Route path="/cart" element={<Cart/>}/>
       <Route path="/:id" element={<Error/>}/>
       </Route>
       </Route>   

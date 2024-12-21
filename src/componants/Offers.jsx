@@ -43,7 +43,9 @@ return (
 
 <Slider {...settings}>
 {all.map(item=>
-<Product imgsrce={item.image} text={item.name} badgetxt={item.id+"%"} texttwo={'$'+item.price} twotext={item.color}/>
+<Product
+item={item}
+ imgsrce={item.image} text={item.name} badgetxt={item.id+"%"} texttwo={'$'+item.price} twotext={item.color}/>
 )}
 </Slider>
 
